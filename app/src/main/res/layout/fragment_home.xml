@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffffff"
+    tools:openDrawer="start">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/navigation_background"
+        >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.87" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/g7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gh10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1" />
+        <!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/gh2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/expression_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="right"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="60sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"
+                android:lines="6"/>
+        </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/gh4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gh2"
+            app:layout_constraintVertical_bias="1.0"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/result_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="right"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:lines="6"
+                />
+        </ScrollView>
+        <Button
+            android:id="@+id/button_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:insetLeft="2dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_chia_du"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/gh5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/g1"
+            app:layout_constraintTop_toBottomOf="@id/gh4"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_ce"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh5"
+            app:layout_constraintLeft_toRightOf="@id/g1"
+            app:layout_constraintRight_toLeftOf="@id/g2"
+            app:layout_constraintTop_toBottomOf="@id/gh4" />
+        <Button
+            android:id="@+id/button_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_c"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh5"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g3"
+            app:layout_constraintTop_toBottomOf="@id/gh4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/c1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/custom_button"
+            app:layout_constraintBottom_toTopOf="@id/gh5"
+            app:layout_constraintLeft_toRightOf="@id/g3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gh4">
+
+            <ImageButton
+                android:id="@+id/button_tro_lai"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="1dp"
+                android:backgroundTint="#ffffff"
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_back"
+                android:textColor="#000000"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/c1"
+                app:layout_constraintRight_toRightOf="@id/c1"
+                app:layout_constraintTop_toTopOf="@id/c1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="2dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_phan_so"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/g1"
+            app:layout_constraintTop_toBottomOf="@id/gh5"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="379dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/c2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/custom_button"
+            app:layout_constraintBottom_toTopOf="@id/gh6"
+            app:layout_constraintLeft_toRightOf="@id/g1"
+            app:layout_constraintRight_toLeftOf="@id/g2"
+            app:layout_constraintTop_toBottomOf="@id/gh5">
+
+            <ImageButton
+                android:id="@+id/button_binh_phuong"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:backgroundTint="#ffffff"
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_square"
+                android:textColor="#000000"
+
+                app:layout_constraintBottom_toBottomOf="@id/c2"
+                app:layout_constraintLeft_toLeftOf="@id/c2"
+                app:layout_constraintRight_toRightOf="@id/c2"
+                app:layout_constraintTop_toTopOf="@id/c2"
+                tools:layout_editor_absoluteX="112dp"
+                tools:layout_editor_absoluteY="379dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/button_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_can_hai"
+            android:textColor="#000000"
+            android:textSize="10sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh6"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g3"
+            app:layout_constraintTop_toBottomOf="@id/gh5"
+            tools:layout_editor_absoluteX="211dp"
+            tools:layout_editor_absoluteY="379dp" />
+        <Button
+            android:id="@+id/button_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="2dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_chia"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh6"
+            app:layout_constraintLeft_toRightOf="@id/g3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gh5" />
+        <Button
+            android:id="@+id/button_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="2dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_7"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/g1"
+            app:layout_constraintTop_toBottomOf="@id/gh6" />
+
+        <Button
+            android:id="@+id/button_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_8"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh7"
+            app:layout_constraintLeft_toRightOf="@id/g1"
+            app:layout_constraintRight_toLeftOf="@id/g2"
+            app:layout_constraintTop_toBottomOf="@id/gh6" />
+
+        <Button
+            android:id="@+id/button_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_9"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g3"
+            app:layout_constraintTop_toBottomOf="@id/gh6"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/button_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="2dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_nhan"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh7"
+            app:layout_constraintLeft_toRightOf="@id/g3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gh6"
+            tools:layout_editor_absoluteX="312dp"
+            tools:layout_editor_absoluteY="456dp" />
+        <Button
+            android:id="@+id/button_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="2dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_4"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/g1"
+            app:layout_constraintTop_toBottomOf="@id/gh7" />
+
+        <Button
+            android:id="@+id/button_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_5"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh8"
+            app:layout_constraintLeft_toRightOf="@id/g1"
+            app:layout_constraintRight_toLeftOf="@id/g2"
+            app:layout_constraintTop_toBottomOf="@id/gh7" />
+
+        <Button
+            android:id="@+id/button_13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_6"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh8"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g3"
+            app:layout_constraintTop_toBottomOf="@id/gh7" />
+
+        <Button
+            android:id="@+id/button_14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="2dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_tru"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/g3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gh7"
+            app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/button_15"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="2dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/g1"
+            app:layout_constraintTop_toBottomOf="@id/gh8" />
+
+        <Button
+            android:id="@+id/button_16"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_2"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh9"
+            app:layout_constraintLeft_toRightOf="@id/g1"
+            app:layout_constraintRight_toLeftOf="@id/g2"
+            app:layout_constraintTop_toBottomOf="@id/gh8" />
+
+        <Button
+            android:id="@+id/button_17"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_3"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh9"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g3"
+            app:layout_constraintTop_toBottomOf="@id/gh8" />
+
+        <Button
+            android:id="@+id/button_18"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="2dp"
+            android:insetBottom="1dp"
+            android:text="@string/cmd_cong"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toTopOf="@id/gh9"
+            app:layout_constraintLeft_toRightOf="@id/g3"
+            app:layout_constraintRight_toLeftOf="@id/g4"
+
+            app:layout_constraintTop_toBottomOf="@id/gh8"
+            tools:layout_editor_absoluteX="314dp"
+            tools:layout_editor_absoluteY="604dp" />
+        <Button
+            android:id="@+id/button_19"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="2dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="2dp"
+            android:text="@string/cmd_cong_tru"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/gh10"
+            app:layout_constraintLeft_toRightOf="@id/g5"
+            app:layout_constraintRight_toLeftOf="@id/g1"
+            app:layout_constraintTop_toTopOf="@id/gh9" />
+
+        <Button
+            android:id="@+id/button_20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="2dp"
+            android:text="@string/cmd_0"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/gh10"
+            app:layout_constraintLeft_toRightOf="@id/g1"
+            app:layout_constraintRight_toLeftOf="@id/g2"
+            app:layout_constraintTop_toTopOf="@id/gh9" />
+
+        <Button
+            android:id="@+id/button_21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="1dp"
+            android:insetBottom="2dp"
+            android:text="@string/cmd_dot"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g3"
+            app:layout_constraintTop_toTopOf="@id/gh9" />
+
+        <Button
+            android:id="@+id/button_22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="#ffffff"
+            android:gravity="center"
+            android:insetLeft="1dp"
+            android:insetTop="1dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/cmd_bang"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/g3"
+            app:layout_constraintRight_toLeftOf="@id/g4"
+            app:layout_constraintTop_toTopOf="@id/gh9" />
+        <Toolbar
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@id/g2"
+            app:layout_constraintRight_toLeftOf="@id/g7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/gh1"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
